@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>詳細</h1>
+  <div>
+  <div class="container" th:object="${employeelist}">
+    <form th:method="post"  th:action="@{/{id}/show(id=${id})}" >
+      <div hidden>
+        <label for="id">ID</label>
+        <input type="text" th:field="*{id}" disabled>
+      </div>
+      <div>
+        <label for="name">名前</label>
+        <input type="text" th:field=*{name}>
+      </div>
+      <div>
+        <label for="furigana">なまえ</label>
+        <input type="text" th:field=*{furigana}>
+      </div>
+      <div>
+        <label for="password">パスワード</label>
+        <input type="password" th:field=*{password}>
+      </div>
+      <div>
+        <label for="password">パスワード</label>
+        <input type="password" th:field=*{password}>
+      </div>
+      <div>
+        <label for="email">メールアドレス</label>
+        <input type="email" th:field=*{email}>
+      </div>
+      <div>
+        <label for="loginId" >ログインID</label>
+        <input type="text" th:field="*{loginId}" disabled>
+      </div>
+      
+      <input type="submit" value="更新">
+    </form>
+  </div>
+  </div>
+</body>
+
+</html>

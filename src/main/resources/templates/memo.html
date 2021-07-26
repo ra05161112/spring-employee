@@ -1,0 +1,33 @@
+schema
+
+CREATE TABLE IF NOT EXISTS `group` (
+   `id`         INTEGER  PRIMARY KEY ,
+   `name` VARCHAR(100) ,
+   `display`        INTEGER 
+ );
+
+ CREATE TABLE IF NOT EXISTS 'Employee' (
+   'id'          INTEGER  PRIMARY KEY,
+   'name' VARCHAR(100),
+   'furigana'       VARCHAR(100),
+   'loginId'       VARCHAR(100),
+   'password'      VARCHAR(255),
+   'email'         VARCHAR,
+   'frg'           VARCHAR
+ )
+
+data 
+
+INSERT INTO groups (
+  `id`,
+  `name`,
+  `display`
+) VALUES (1,'本社',1),(2,'営業部',2),(3,'管理部',3),(4,'ITサービス事業部',4);
+
+INSERT INTO employees (id,name,furigana,login_id,password,email,frg)
+ VALUES('1','有馬治彦','ありまはるひこ','arima','password','arima@cm.co.jp','false'),
+ ('2','松尾和久','まつおかずひさ','k.matsuo','password','k.matsuo@cm.co.jp','false'),
+ ('3','田中美紗','たなかみさ','tanaka','password','tanaka@cm.co.jp','false'),
+ ('4','福永果穂','ふくながかほ','fukunaga','password','fukunaga@cm.co.jp','false'),
+ ('5','後藤優太','ごとうゆうた','y.goto','password','y.goto@cm.co.jp','false'),
+ ('6','谷口浩平','たにぐちこうへい','k.taniguchi','password','k.taniguchi@cm.co.jp','false');
